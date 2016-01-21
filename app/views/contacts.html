@@ -42,7 +42,7 @@
                 <tr ng-repeat="contact in contacts">
                     <td>
                         <span ng-hide="contact.isEditable">
-                        {{contact.firstName}} {{contact.surname}}
+                        {{contact | name}}
                         </span>
                         <div ng-show="contact.isEditable">
                             <input type="text" ng-model="contact.firstName">
