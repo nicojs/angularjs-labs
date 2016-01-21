@@ -1,0 +1,68 @@
+<div class="jumbotron" ng-hide="true">
+    <h1>Hello {{name}}!</h1>
+    <p class="lead">
+        What's your name?
+        <input type="text" ng-model="name">
+    </p>
+    <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" class="form-control" ng-model="current.firstName">
+        </div>
+        <div class="form-group">
+            <label for="surname">Surname</label>
+            <input id="surname" name="surname" type="text" class="form-control" ng-model="current.surname">
+        </div>
+        <div class="form-group">
+            <label for="emailAddress">E-mail address</label>
+            <input id="emailAddress" name="emailAddress" type="text" class="form-control" ng-model="current.email">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" ng-click="add(current)">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>E-mail address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in contacts">
+                    <td>
+                        <span ng-hide="contact.isEditable">
+                        {{contact.firstName}} {{contact.surname}}
+                        </span>
+                        <div ng-show="contact.isEditable">
+                            <input type="text" ng-model="contact.firstName">
+                            <input type="text" ng-model="contact.surname">
+                        </div>
+                    </td>
+                    <td>
+                        <span ng-hide="contact.isEditable">
+                        {{contact.email}}
+                        </span>
+                        <div ng-show="contact.isEditable">
+                            <input type="text" ng-model="contact.email">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn" ng-click="edit(contact)">{{contact.editLabel  || 'Edit'}}</button>
+                        <button class="btn btn-danger" ng-click="delete(contact)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

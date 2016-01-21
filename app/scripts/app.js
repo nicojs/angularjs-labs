@@ -20,8 +20,8 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/helloWorld.html',
-        controller: 'HelloWorldCtrl',
+        templateUrl: 'views/contacts.html',
+        controller: 'ContactsCtrl',
         controllerAs: 'main'
       });   
   });
