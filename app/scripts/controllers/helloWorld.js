@@ -8,10 +8,6 @@
  * Controller of the angularjsLabsApp
  */
 angular.module('angularjsLabsApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('HelloWorldCtrl', function () {
+    
   });
