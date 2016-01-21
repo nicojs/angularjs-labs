@@ -1,9 +1,9 @@
-h1. Prerequisites
+# Prerequisites
 
-h2. NodeJS and npm
+## NodeJS and npm
 Go to https://nodejs.org/en/ and download/install the latest stable version
 
-h2. Global node modules
+## Global node modules
 Open a command prompt and run the following command to install these modules globally:
 
 - grunt-cli
